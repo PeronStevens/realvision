@@ -9,7 +9,7 @@
             </p>
         </div>
         <div class="flex w-1/4 justify-center" >
-            <img :src="image" width="100" alt="">
+            <img :src="image" class="h-40" width="100" height="150" alt="">
         </div>
     </div>
 </template>
