@@ -1,7 +1,13 @@
 <template>
     <div class="flex mb-4">
-        <div class="w-full bg-gray-500 h-12">
-
+        <div class="md:w-1/2 flex flex-col mx-auto">
+            <img class="bg-black p-3 mx-auto"  src="https://www.realvision.com/wp/app/themes/prospect/images/logos/generic/white/logo-generic2x.png" alt="">
+            <ShowComponent v-for="show in shows" 
+                           :key="show.id" 
+                           :name="show.name"
+                           :description="show.description"
+                           :image="show.image"
+                            />
         </div>
     </div>
 </template>
@@ -15,14 +21,17 @@ export default {
     components: {
         ShowComponent
     },
-    data: () => {
+    data: function() {
         return {
             shows: []
         }
     },
-    mounted: () => {
+    mounted: function() {
         axios.get('api/data')
-        .then(response => console.log(response));
-    }
+        .then((response) => {
+            console.log(response.data);
+            this.shows = response.data
+        });
+    },
 }
 </script>

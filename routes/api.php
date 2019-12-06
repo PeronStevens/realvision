@@ -13,6 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api', 'throttle:60,1')->group(function () {
+Route::middleware('throttle:60,1')->group(function () {
     Route::get('data', 'DataController@index');
 });
