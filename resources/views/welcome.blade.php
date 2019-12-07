@@ -13,7 +13,7 @@
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
-<body class="h-screen antialiased leading-none">
+<body class="bg-black h-screen antialiased leading-none">
     <div id="app" class="flex flex-col mx-auto w-full">
         <show-viewer-component></show-viewer-component>
     </div>
