@@ -29,7 +29,7 @@ export default {
     mounted: function() {
         axios.get('api/data')
         .then((response) => {
-            console.log(response.data);
+            // console.log(response.data);
             this.shows = response.data
         });
     },
